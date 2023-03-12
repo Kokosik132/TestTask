@@ -8,24 +8,35 @@ export const PostScreen: React.FC = () => {
 
   const refetchPost = (): void => {
     refetch();
-  }
+  };
 
   return (
     <MainContainer title="Posts">
-      <TouchableText textStyle={styles.buttonText} containerStyle={styles.button} onPress={refetchPost} text="Refresh" />
+      <TouchableText
+        textStyle={styles.buttonText}
+        containerStyle={styles.button}
+        onPress={refetchPost}
+        text="Refresh"
+      />
       {isLoading ? (
         <View style={styles.loading}>
           <Typography>Loading...</Typography>
         </View>
       ) : (
-      <FlatList
+        <FlatList
           showsVerticalScrollIndicator={false}
           bounces={false}
           data={posts}
           renderItem={({ item }) => (
-            <Card style={styles.card} key={item.id} body={item.body} title={item.title} userId={item.userId} />
+            <Card
+              style={styles.card}
+              key={item.id}
+              body={item.body}
+              title={item.title}
+              userId={item.userId}
+            />
           )}
-      />    
+        />
       )}
     </MainContainer>
   );
@@ -50,4 +61,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
   },
-})
+});

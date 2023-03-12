@@ -1,9 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { combineReducers } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
-import { rtkQuery } from '~/services/rtkQuery/rtkQuery';
-
-import { uiReducer } from '~/store/modules/ui';
+import { rtkQuery } from '~/services/rtkQuery';
+import { uiReducer } from './modules';
 
 const uiPersisted = persistReducer(
   {
@@ -12,7 +11,7 @@ const uiPersisted = persistReducer(
     storage: AsyncStorage,
     whitelist: ['buttons'],
   },
-  uiReducer,
+  uiReducer
 );
 
 export const coreReducer = combineReducers({

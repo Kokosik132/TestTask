@@ -8,7 +8,7 @@ const Drawer = createDrawerNavigator();
 export const MyDrawer = () => {
   return (
     <Drawer.Navigator drawerContent={() => <DrawerView />}>
-        <Drawer.Screen name="App" component={MyTabs} />
+      <Drawer.Screen name="App" component={MyTabs} />
     </Drawer.Navigator>
   );
-}
+};

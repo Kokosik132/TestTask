@@ -27,7 +27,7 @@ export const TouchableText: FC<TouchableTextProps> = ({
 }) => (
   <TouchableOpacity
     hitSlop={{ top: 10, left: 10, right: 10, bottom: 10 }}
-    onPress={e => {
+    onPress={(e) => {
       if (!disabled && onPress) {
         onPress(e);
       }

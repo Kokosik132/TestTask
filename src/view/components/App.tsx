@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import RNBootSplash from 'react-native-bootsplash';
-
-import { AppNavigator } from '~/view/navigation/App';
+import { AppNavigator } from '../navigation';
 
 export const App: React.FC = () => {
   useEffect(() => {

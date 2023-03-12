@@ -1,5 +1,8 @@
 import { useReduxDevToolsExtension } from '@react-navigation/devtools';
-import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
+import {
+  NavigationContainer,
+  useNavigationContainerRef,
+} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 
@@ -25,4 +28,3 @@ export const AppNavigator: React.FC = () => {
     </NavigationContainer>
   );
 };
-

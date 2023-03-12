@@ -1,5 +1,10 @@
 import React, { FC, ReactNode } from 'react';
-import { StyleProp, Text as BaseText, TextProps, TextStyle } from 'react-native';
+import {
+  StyleProp,
+  Text as BaseText,
+  TextProps,
+  TextStyle,
+} from 'react-native';
 
 interface TypographyProps extends TextProps {
   children: ReactNode;
@@ -21,7 +26,6 @@ export const textVariants: Record<TextVariant, StyleProp<TextStyle>> = {
 };
 
 export type TextVariant = 'p1' | 'h1';
-
 
 export const Typography: FC<TypographyProps> = ({
   children,
